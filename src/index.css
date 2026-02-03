@@ -178,12 +178,24 @@
 }
 
 @media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
   body {
     @apply bg-white;
   }
   
   .quote-page {
     @apply shadow-none;
+  }
+
+  .quote-page img {
+    display: block !important;
+    visibility: visible !important;
+    max-width: 100% !important;
   }
   
   .no-print {
