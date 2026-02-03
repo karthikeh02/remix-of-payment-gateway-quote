@@ -1,4 +1,4 @@
-import { FileText, Mail, Phone, Globe, AlertCircle, CreditCard, Shield } from "lucide-react";
+import { FileText, Mail, Phone, Globe, AlertCircle, TrendingUp, Shield } from "lucide-react";
 import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
@@ -16,42 +16,47 @@ const QuotationDocument = () => {
 
   const services = [
     {
-      service: "Payment Gateway Integration",
-      description: "Complete integration of payment gateway (Stripe/Razorpay) with your website or application including checkout flow, payment processing, and order confirmation."
+      service: "Website Management",
+      description: "Monthly website monitoring, security updates, backups, performance optimization, content updates, and minor design tweaks to keep your site running smoothly.",
+      price: "₹4,500"
     },
     {
-      service: "Secure Payment Processing",
-      description: "Implementation of PCI DSS compliant payment handling with SSL/TLS encryption, tokenization, and secure data transmission."
+      service: "Search Engine Optimization (SEO)",
+      description: "Local SEO optimization for Kolkata/East India, on-page optimization, Google Business Profile management, keyword research & targeting, technical SEO audits, and monthly ranking reports.",
+      price: "₹8,500"
     },
     {
-      service: "Webhook Configuration",
-      description: "Setup of payment webhooks for real-time payment status updates, order fulfillment triggers, and notification systems."
-    },
-    {
-      service: "Testing & Deployment",
-      description: "Comprehensive testing in sandbox/test environment followed by production deployment with payment verification."
+      service: "Social Media Optimization (SMO)",
+      description: "Social profile management across Instagram & Facebook, 8-12 creative posts per month, audience engagement, hashtag strategy, basic analytics, and monthly performance reports.",
+      price: "₹9,500"
     },
   ];
 
   const extraFeatures = [
-    { feature: "Refund Management System", description: "Full or partial refund processing capability with tracking" },
-    { feature: "Multi-Gateway Support", description: "Integration of multiple payment providers for failover and redundancy" },
-    { feature: "Admin Dashboard", description: "Custom admin panel for transaction monitoring, reporting, and management" },
-    { feature: "Subscription/Recurring Payments", description: "Automated recurring billing and subscription management" },
-    { feature: "Multi-Currency Support", description: "Accept payments in multiple currencies with auto-conversion" },
+    { feature: "Paid Advertising Management", description: "Google Ads & Meta Ads campaign setup, optimization, and reporting" },
+    { feature: "Additional Social Platforms", description: "Extend SMO to LinkedIn, Twitter/X, Pinterest, or YouTube" },
+    { feature: "E-commerce Integration", description: "Product catalog setup, payment gateway, and order management" },
+    { feature: "Content Writing Services", description: "Blog posts, articles, and website copy creation" },
+    { feature: "Video Content Creation", description: "Reels, shorts, and promotional video production" },
+    { feature: "Email Marketing", description: "Newsletter design, automation, and campaign management" },
+    { feature: "Influencer Collaboration", description: "Identifying and coordinating with local influencers for brand promotion" },
+    { feature: "Advanced Analytics Dashboard", description: "Custom reporting dashboard with real-time metrics and insights" },
   ];
 
   const termsAndConditions = [
     "This quotation is valid for 4 (four) days from the date of issue.",
+    "This is a recurring monthly service. Minimum contract period: 6 months for service consistency and measurable results.",
+    "Payment is due within 7 days of invoice date at the start of each month.",
     "Scope is limited to services mentioned above. Any additional requirements will be quoted separately.",
-    "Client must provide timely access to hosting, codebase, and payment gateway merchant accounts.",
-    "Transaction fees charged by payment service providers (Stripe, Razorpay, etc.) are NOT included in this quotation and shall be paid directly by the client to the respective service provider as per their pricing.",
-    "Gateway merchant account creation and KYC verification must be completed by the client. We can assist with documentation if required.",
-    "Integration timeline: 5-10 business days depending on project complexity and client responsiveness.",
-    "Any delays caused by client-side dependencies (access, approvals, documentation) may extend the timeline.",
-    "Post-deployment support: 15 days of bug fixes and minor adjustments at no extra cost.",
+    "Client must provide timely access to website hosting, CMS login, social media accounts, and Google Business Profile.",
+    "Content approval: Client will receive content drafts for approval before publishing. Delayed approvals may affect posting schedule.",
+    "SEO results typically take 3-6 months to show significant improvement. Rankings depend on competition and algorithm updates.",
+    "Social media growth depends on engagement, content quality, and audience behavior. We do not guarantee specific follower counts.",
+    "Any third-party tool subscriptions (premium plugins, stock images, ad spend) are NOT included and will be billed separately.",
+    "Service can be upgraded or scaled mid-contract with 15 days notice and revised pricing.",
+    "Cancellation requires 30 days written notice. Early termination within minimum period incurs 2 months' fee.",
+    "Monthly performance reports will be shared by the 5th of each following month.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
-    "All payment integrations will follow the latest security standards and compliance requirements of the chosen payment provider.",
   ];
 
   return (
@@ -72,7 +77,7 @@ const QuotationDocument = () => {
             <div>
               <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
               <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
-              <p className="text-muted-foreground mt-1 text-sm">Payment Integration Services</p>
+              <p className="text-muted-foreground mt-1 text-sm">Digital Marketing Services - Basic Plan</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
@@ -91,8 +96,8 @@ const QuotationDocument = () => {
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   <div>
                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Bill To</h3>
-                    <p className="text-lg font-semibold text-foreground">Rahul Kumar</p>
-                    <p className="text-muted-foreground text-sm mt-1">Client</p>
+                    <p className="text-lg font-semibold text-foreground">The Finishing Touch Garden Studio</p>
+                    <p className="text-muted-foreground text-sm mt-1">Kolkata, West Bengal</p>
                   </div>
                   <div>
                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Service Provider</h3>
@@ -120,15 +125,16 @@ const QuotationDocument = () => {
           {/* Services Table */}
           <div className="quote-section">
             <div className="flex items-center gap-3 mb-4">
-              <CreditCard className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-semibold text-foreground">Services Included</h2>
+              <TrendingUp className="w-5 h-5 text-primary" />
+              <h2 className="text-lg font-semibold text-foreground">Monthly Services Included</h2>
             </div>
             <div className="overflow-hidden rounded-lg border border-quote-border">
               <table className="w-full">
                 <thead>
                   <tr className="quote-table-header">
-                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Service</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/4">Service</th>
                     <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
+                    <th className="text-right py-3 px-4 text-sm font-semibold w-24">Monthly</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -136,6 +142,7 @@ const QuotationDocument = () => {
                     <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
                       <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.service}</td>
                       <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
+                      <td className="py-3 px-4 text-sm font-semibold text-foreground text-right align-top">{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -178,12 +185,12 @@ const QuotationDocument = () => {
             <div className="quote-total-box p-6 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Total Project Cost</p>
-                  <p className="text-xs text-white/60 mt-1">For base payment integration services</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Total Monthly Cost</p>
+                  <p className="text-xs text-white/60 mt-1">Basic Plan - Digital Marketing Bundle</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹30,000/-</p>
-                  <p className="text-white/70 text-sm mt-1">Excluding GST (18%)</p>
+                  <p className="text-3xl font-bold">₹22,500/-</p>
+                  <p className="text-white/70 text-sm mt-1">Per Month • Excluding GST (18%)</p>
                 </div>
               </div>
             </div>
@@ -193,11 +200,11 @@ const QuotationDocument = () => {
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-semibold text-amber-800">Important: Transaction Fees</p>
+              <p className="text-sm font-semibold text-amber-800">Important: Additional Costs</p>
               <p className="text-sm text-amber-700 mt-1">
-                All transaction/processing fees charged by payment service providers (Stripe, Razorpay, etc.) 
-                are NOT included in this quotation. These fees will be paid directly by the client to the 
-                respective service provider as per their published pricing structure.
+                Ad spend for paid campaigns (Google Ads, Meta Ads), third-party tool subscriptions, 
+                premium stock images, and any other external services are NOT included in this quotation 
+                and will be billed separately as per actual usage.
               </p>
             </div>
           </div>
