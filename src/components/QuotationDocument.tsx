@@ -85,28 +85,34 @@ const QuotationDocument = () => {
         {/* Main Content */}
         <div className="px-10 py-8 relative z-10">
           {/* Client & Provider Info */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="quote-highlight-box p-5 rounded-lg">
-              <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3">Bill To</h3>
-              <p className="text-lg font-semibold text-foreground">Rahul Kumar</p>
-              <p className="text-muted-foreground text-sm mt-1">Client</p>
-            </div>
-            <div className="p-5 border border-quote-border rounded-lg">
-              <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-3">Service Provider</h3>
-              <p className="text-lg font-semibold text-foreground">Zan Services</p>
-              <div className="text-sm text-muted-foreground mt-2 space-y-1">
-                <p className="flex items-center gap-2">
-                  <Globe className="w-3.5 h-3.5" />
-                  zanservices.com
-                </p>
-                <p className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5" />
-                  +91 82408 25490
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="w-3.5 h-3.5" />
-                  operations@zanservices.com
-                </p>
+          <div className="flex justify-between items-start mb-8 gap-8">
+            <div className="flex-1">
+              <div className="quote-highlight-box p-5 rounded-lg">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                  <div>
+                    <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Bill To</h3>
+                    <p className="text-lg font-semibold text-foreground">Rahul Kumar</p>
+                    <p className="text-muted-foreground text-sm mt-1">Client</p>
+                  </div>
+                  <div>
+                    <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Service Provider</h3>
+                    <p className="text-lg font-semibold text-foreground">Zan Services</p>
+                    <div className="text-sm text-muted-foreground mt-1 space-y-1">
+                      <p className="flex items-center gap-2">
+                        <Globe className="w-3.5 h-3.5" />
+                        zanservices.com
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Phone className="w-3.5 h-3.5" />
+                        +91 82408 25490
+                      </p>
+                      <p className="flex items-center gap-2">
+                        <Mail className="w-3.5 h-3.5" />
+                        operations@zanservices.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -254,6 +260,7 @@ const QuotationDocument = () => {
             {/* Signature */}
             <div className="flex flex-col justify-end">
               <div className="text-right">
+                <div className="h-20 mb-2"></div>
                 <div className="quote-signature-line ml-auto mb-2"></div>
                 <p className="text-sm font-semibold text-foreground">Authorised Signatory</p>
                 <p className="text-sm text-muted-foreground">Zan Services</p>
