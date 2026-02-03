@@ -1,4 +1,4 @@
-import { FileText, Mail, Phone, Globe, AlertCircle, TrendingUp, Shield } from "lucide-react";
+import { FileText, Mail, Phone, Globe, AlertCircle, TrendingUp } from "lucide-react";
 import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
@@ -17,7 +17,7 @@ const QuotationDocument = () => {
   const services = [
     {
       service: "Website Management",
-      description: "Monthly website monitoring, security updates, backups, performance optimization, content updates, and minor design tweaks to keep your site running smoothly.",
+      description: "Monthly website monitoring, security updates, backups, performance optimization, and minor design tweaks to keep your site running smoothly.",
       price: "₹4,500"
     },
     {
@@ -32,20 +32,10 @@ const QuotationDocument = () => {
     },
   ];
 
-  const extraFeatures = [
-    { feature: "Paid Advertising Management", description: "Google Ads & Meta Ads campaign setup, optimization, and reporting" },
-    { feature: "Additional Social Platforms", description: "Extend SMO to LinkedIn, Twitter/X, Pinterest, or YouTube" },
-    { feature: "E-commerce Integration", description: "Product catalog setup, payment gateway, and order management" },
-    { feature: "Content Writing Services", description: "Blog posts, articles, and website copy creation" },
-    { feature: "Video Content Creation", description: "Reels, shorts, and promotional video production" },
-    { feature: "Email Marketing", description: "Newsletter design, automation, and campaign management" },
-    { feature: "Influencer Collaboration", description: "Identifying and coordinating with local influencers for brand promotion" },
-    { feature: "Advanced Analytics Dashboard", description: "Custom reporting dashboard with real-time metrics and insights" },
-  ];
 
   const termsAndConditions = [
     "This quotation is valid for 4 (four) days from the date of issue.",
-    "This is a recurring monthly service. Minimum contract period: 6 months for service consistency and measurable results.",
+    "This is a recurring monthly service.",
     "Payment is due within 7 days of invoice date at the start of each month.",
     "Scope is limited to services mentioned above. Any additional requirements will be quoted separately.",
     "Client must provide timely access to website hosting, CMS login, social media accounts, and Google Business Profile.",
@@ -54,7 +44,6 @@ const QuotationDocument = () => {
     "Social media growth depends on engagement, content quality, and audience behavior. We do not guarantee specific follower counts.",
     "Any third-party tool subscriptions (premium plugins, stock images, ad spend) are NOT included and will be billed separately.",
     "Service can be upgraded or scaled mid-contract with 15 days notice and revised pricing.",
-    "Cancellation requires 30 days written notice. Early termination within minimum period incurs 2 months' fee.",
     "Monthly performance reports will be shared by the 5th of each following month.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
   ];
@@ -150,35 +139,6 @@ const QuotationDocument = () => {
             </div>
           </div>
 
-          {/* Extra Features */}
-          <div className="quote-section">
-            <div className="flex items-center gap-3 mb-4">
-              <Shield className="w-5 h-5 text-quote-accent" />
-              <h2 className="text-lg font-semibold text-foreground">Additional Features</h2>
-              <span className="quote-badge">Extra Charges Apply</span>
-            </div>
-            <div className="overflow-hidden rounded-lg border border-quote-border">
-              <table className="w-full">
-                <thead>
-                  <tr className="quote-table-header">
-                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Feature</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {extraFeatures.map((item, index) => (
-                    <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
-                      <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.feature}</td>
-                      <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-muted-foreground mt-3 italic">
-              * Pricing for additional features will be provided upon request based on specific requirements.
-            </p>
-          </div>
 
           {/* Total Cost */}
           <div className="my-8">
