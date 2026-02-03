@@ -191,6 +191,7 @@ const QuotationDocument = () => {
                 <div className="text-right">
                   <p className="text-3xl font-bold">₹22,500/-</p>
                   <p className="text-white/70 text-sm mt-1">Per Month • Excluding GST (18%)</p>
+                  <p className="text-xl font-semibold mt-2 text-white/90">₹26,550/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
                 </div>
               </div>
             </div>
