@@ -2,56 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 20% 98%;
+    --foreground: 220 25% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 25% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 25% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 70% 45%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 15% 95%;
+    --secondary-foreground: 220 25% 20%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 15% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 220 25% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 70% 45%;
 
     --radius: 0.5rem;
 
+    /* Custom quotation styles */
+    --quote-header-bg: 220 70% 20%;
+    --quote-header-fg: 0 0% 100%;
+    --quote-accent: 35 95% 55%;
+    --quote-table-header: 220 25% 96%;
+    --quote-table-stripe: 220 15% 98%;
+    --quote-border: 220 15% 85%;
+    --quote-success: 145 60% 40%;
+    --quote-highlight: 220 70% 95%;
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -101,5 +102,87 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .quote-page {
+    @apply bg-card shadow-2xl max-w-4xl mx-auto;
+    box-shadow: 0 25px 50px -12px hsl(var(--foreground) / 0.15);
+  }
+
+  .quote-header {
+    background: linear-gradient(135deg, hsl(var(--quote-header-bg)) 0%, hsl(220 60% 30%) 100%);
+    @apply text-white py-10 px-10;
+  }
+
+  .quote-section {
+    @apply border-b border-quote-border py-6;
+  }
+
+  .quote-table-header {
+    @apply bg-quote-table-header font-semibold text-foreground;
+  }
+
+  .quote-table-row-stripe {
+    @apply bg-quote-table-stripe;
+  }
+
+  .quote-highlight-box {
+    background: linear-gradient(135deg, hsl(var(--quote-highlight)) 0%, hsl(220 80% 97%) 100%);
+    @apply border-l-4 border-primary;
+  }
+
+  .quote-total-box {
+    background: linear-gradient(135deg, hsl(var(--quote-header-bg)) 0%, hsl(220 60% 25%) 100%);
+    @apply text-white;
+  }
+
+  .quote-accent-bar {
+    @apply h-1 w-16;
+    background: linear-gradient(90deg, hsl(var(--quote-accent)) 0%, hsl(35 90% 60%) 100%);
+  }
+
+  .quote-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium;
+    background: hsl(var(--quote-accent));
+    color: hsl(var(--foreground));
+  }
+
+  .quote-tc-item {
+    @apply flex items-start gap-3 py-2;
+  }
+
+  .quote-tc-bullet {
+    @apply w-2 h-2 rounded-full mt-2 flex-shrink-0;
+    background: hsl(var(--primary));
+  }
+
+  .quote-footer {
+    background: hsl(var(--quote-table-header));
+    @apply py-8 px-10;
+  }
+
+  .quote-signature-line {
+    @apply border-b-2 border-dashed border-quote-border w-48;
+  }
+}
+
+@media print {
+  body {
+    @apply bg-white;
+  }
+  
+  .quote-page {
+    @apply shadow-none;
+  }
+  
+  .no-print {
+    display: none !important;
   }
 }
