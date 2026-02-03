@@ -1,9 +1,10 @@
-import { FileText, Mail, Phone, Globe, CheckCircle2, AlertCircle, CreditCard, Shield } from "lucide-react";
+import { FileText, Mail, Phone, Globe, AlertCircle, CreditCard, Shield } from "lucide-react";
+import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
   const currentDate = new Date();
   const validUntilDate = new Date(currentDate);
-  validUntilDate.setDate(validUntilDate.getDate() + 7);
+  validUntilDate.setDate(validUntilDate.getDate() + 4);
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-IN', {
@@ -41,14 +42,13 @@ const QuotationDocument = () => {
   ];
 
   const termsAndConditions = [
-    "This quotation is valid for 7 (seven) days from the date of issue.",
+    "This quotation is valid for 4 (four) days from the date of issue.",
     "Scope is limited to services mentioned above. Any additional requirements will be quoted separately.",
     "Client must provide timely access to hosting, codebase, and payment gateway merchant accounts.",
     "Transaction fees charged by payment service providers (Stripe, Razorpay, etc.) are NOT included in this quotation and shall be paid directly by the client to the respective service provider as per their pricing.",
     "Gateway merchant account creation and KYC verification must be completed by the client. We can assist with documentation if required.",
     "Integration timeline: 5-10 business days depending on project complexity and client responsiveness.",
     "Any delays caused by client-side dependencies (access, approvals, documentation) may extend the timeline.",
-    "50% advance payment required to commence work. Remaining 50% upon completion and before production deployment.",
     "Post-deployment support: 15 days of bug fixes and minor adjustments at no extra cost.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
     "All payment integrations will follow the latest security standards and compliance requirements of the chosen payment provider.",
@@ -56,28 +56,34 @@ const QuotationDocument = () => {
 
   return (
     <div className="min-h-screen bg-background py-8 px-4 print:py-0 print:px-0">
-      <div className="quote-page rounded-lg overflow-hidden">
+      <div className="quote-page rounded-lg overflow-hidden relative">
+        {/* Background Logo Watermark */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
+          <img 
+            src={zanLogo} 
+            alt="" 
+            className="w-[600px] opacity-[0.04] select-none"
+          />
+        </div>
+
         {/* Header */}
-        <div className="quote-header">
+        <div className="quote-header-light relative z-10">
           <div className="flex justify-between items-start">
             <div>
-              <h1 className="text-3xl font-bold tracking-tight font-display">Quotation</h1>
-              <p className="text-white/80 mt-1 text-sm">Payment Integration Services</p>
+              <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
+              <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
+              <p className="text-muted-foreground mt-1 text-sm">Payment Integration Services</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
-              <div className="flex items-center gap-2 justify-end">
-                <FileText className="w-5 h-5" />
-                <span className="text-lg font-semibold">ZAN-2026-0127</span>
-              </div>
-              <p className="text-white/70 text-sm mt-1">Date: {formatDate(currentDate)}</p>
-              <p className="text-white/70 text-sm">Valid Until: {formatDate(validUntilDate)}</p>
+              <p className="text-muted-foreground text-sm mt-1">Date: {formatDate(currentDate)}</p>
+              <p className="text-muted-foreground text-sm">Valid Until: {formatDate(validUntilDate)}</p>
             </div>
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="px-10 py-8">
+        <div className="px-10 py-8 relative z-10">
           {/* Client & Provider Info */}
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="quote-highlight-box p-5 rounded-lg">
