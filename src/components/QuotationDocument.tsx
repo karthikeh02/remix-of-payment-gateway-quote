@@ -18,7 +18,7 @@ const QuotationDocument = () => {
     {
       service: "Website Management",
       description: "Monthly website monitoring, security updates, backups, performance optimization, content updates, and minor design tweaks to keep your site running smoothly.",
-      price: "₹4,500"
+      price: "₹4,000"
     },
     {
       service: "Search Engine Optimization (SEO)",
@@ -26,20 +26,20 @@ const QuotationDocument = () => {
       price: "₹8,500"
     },
     {
-      service: "Social Media Optimization (SMO)",
-      description: "Social profile management across Instagram & Facebook, 8-12 creative posts per month, audience engagement, hashtag strategy, basic analytics, and monthly performance reports.",
-      price: "₹9,500"
+      service: "Meta Ads Campaign Management",
+      description: "Meta Ads campaign setup & management (₹250/day awareness campaigns on Facebook & Instagram), audience targeting, creative optimization, A/B testing, and performance reporting.",
+      price: "₹5,500"
     },
     {
       service: "Paid Advertising Management & WhatsApp Marketing",
-      description: "Google Ads campaign management (₹1,000/day targeting Kolkata & nearby areas), Meta Ads campaign management (₹250/day awareness campaigns on Facebook & Instagram), and WhatsApp Business marketing with broadcast campaigns, customer engagement & automated responses.",
-      price: "₹10,500"
+      description: "Google Ads campaign management (₹1,000/day targeting Kolkata & nearby areas), campaign optimization & reporting, and WhatsApp Business marketing with broadcast campaigns, customer engagement & automated responses.",
+      price: "₹14,500"
     },
   ];
 
   const extraFeatures = [
-    { feature: "Paid Advertising Management", description: "Google Ads & Meta Ads campaign setup, optimization, and reporting" },
-    { feature: "Additional Social Platforms", description: "Extend SMO to LinkedIn, Twitter/X, Pinterest, or YouTube" },
+    { feature: "Social Media Optimization (SMO)", description: "Social profile management, content creation, audience engagement across Instagram, Facebook, LinkedIn & more" },
+    { feature: "Additional Social Platforms", description: "Extend presence to LinkedIn, Twitter/X, Pinterest, or YouTube" },
     { feature: "E-commerce Integration", description: "Product catalog setup, payment gateway, and order management" },
     { feature: "Content Writing Services", description: "Blog posts, articles, and website copy creation" },
     { feature: "Video Content Creation", description: "Reels, shorts, and promotional video production" },
@@ -60,7 +60,6 @@ const QuotationDocument = () => {
     "Any third-party tool subscriptions (premium plugins, stock images, ad spend) are NOT included and will be billed separately.",
     "Service can be upgraded or scaled mid-contract with 15 days notice and revised pricing.",
     "Cancellation requires 30 days written notice. Early termination within minimum period incurs 2 months' fee.",
-    "Monthly performance reports will be shared by the 5th of each following month.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
   ];
 
@@ -194,9 +193,9 @@ const QuotationDocument = () => {
                   <p className="text-xs text-white/60 mt-1">Basic Plan - Digital Marketing Bundle</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹33,000/-</p>
+                  <p className="text-3xl font-bold">₹32,500/-</p>
                   <p className="text-white/70 text-sm mt-1">Per Month • Excluding GST (18%)</p>
-                  <p className="text-xl font-semibold mt-2 text-white/90">₹38,940/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
+                  <p className="text-xl font-semibold mt-2 text-white/90">₹38,350/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
                 </div>
               </div>
             </div>
