@@ -30,6 +30,11 @@ const QuotationDocument = () => {
       description: "Social profile management across Instagram & Facebook, 8-12 creative posts per month, audience engagement, hashtag strategy, basic analytics, and monthly performance reports.",
       price: "₹9,500"
     },
+    {
+      service: "Paid Advertising Management & WhatsApp Marketing",
+      description: "Google Ads campaign management (₹1,000/day targeting Kolkata & nearby areas), Meta Ads campaign management (₹250/day awareness campaigns on Facebook & Instagram), and WhatsApp Business marketing with broadcast campaigns, customer engagement & automated responses.",
+      price: "₹10,500"
+    },
   ];
 
   const extraFeatures = [
@@ -182,18 +187,36 @@ const QuotationDocument = () => {
 
           {/* Total Cost */}
           <div className="my-8">
-            <div className="quote-total-box p-6 rounded-lg">
+          <div className="quote-total-box p-6 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Total Monthly Cost</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Monthly Service Fee</p>
                   <p className="text-xs text-white/60 mt-1">Basic Plan - Digital Marketing Bundle</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹22,500/-</p>
+                  <p className="text-3xl font-bold">₹33,000/-</p>
                   <p className="text-white/70 text-sm mt-1">Per Month • Excluding GST (18%)</p>
-                  <p className="text-xl font-semibold mt-2 text-white/90">₹26,550/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
+                  <p className="text-xl font-semibold mt-2 text-white/90">₹38,940/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
                 </div>
               </div>
+            </div>
+
+            {/* Ad Spend Breakdown */}
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mt-4">
+              <p className="text-sm font-semibold text-blue-800 mb-3">Client Ad Spend (Billed Separately)</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white rounded-md p-3 border border-blue-100">
+                  <p className="text-xs text-blue-600 font-medium uppercase tracking-wider">Google Ads</p>
+                  <p className="text-lg font-bold text-blue-900 mt-1">₹1,000/day</p>
+                  <p className="text-xs text-blue-500 mt-0.5">~₹30,000/month • Kolkata & nearby</p>
+                </div>
+                <div className="bg-white rounded-md p-3 border border-blue-100">
+                  <p className="text-xs text-blue-600 font-medium uppercase tracking-wider">Meta Ads</p>
+                  <p className="text-lg font-bold text-blue-900 mt-1">₹250/day</p>
+                  <p className="text-xs text-blue-500 mt-0.5">~₹7,500/month • Awareness campaigns</p>
+                </div>
+              </div>
+              <p className="text-xs text-blue-600 mt-3 italic">* Ad spend is paid directly to Google/Meta. Amounts may vary based on campaign performance and optimization.</p>
             </div>
           </div>
 
@@ -201,11 +224,11 @@ const QuotationDocument = () => {
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-semibold text-amber-800">Important: Additional Costs</p>
+              <p className="text-sm font-semibold text-amber-800">Important: Ad Spend & Additional Costs</p>
               <p className="text-sm text-amber-700 mt-1">
-                Ad spend for paid campaigns (Google Ads, Meta Ads), third-party tool subscriptions, 
-                premium stock images, and any other external services are NOT included in this quotation 
-                and will be billed separately as per actual usage.
+                Google Ads (~₹30,000/month) and Meta Ads (~₹7,500/month) spend is paid directly to the respective platforms 
+                and is NOT included in the service fee. Third-party tool subscriptions, premium stock images, 
+                WhatsApp Business API charges (if any), and any other external services will also be billed separately.
               </p>
             </div>
           </div>
