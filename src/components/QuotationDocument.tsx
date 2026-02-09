@@ -130,23 +130,21 @@ const QuotationDocument = () => {
           <div className="quote-section">
             <div className="flex items-center gap-3 mb-4">
               <TrendingUp className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-semibold text-foreground">Monthly Services Included</h2>
+              <h2 className="text-lg font-semibold text-foreground">Services Included</h2>
             </div>
             <div className="overflow-hidden rounded-lg border border-quote-border">
               <table className="w-full">
                 <thead>
                   <tr className="quote-table-header">
-                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/4">Service</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
-                    <th className="text-right py-3 px-4 text-sm font-semibold w-24">Monthly</th>
-                  </tr>
+                     <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Service</th>
+                     <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
+                   </tr>
                 </thead>
                 <tbody>
                   {services.map((item, index) => (
                     <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
                       <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.service}</td>
                       <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
-                      <td className="py-3 px-4 text-sm font-semibold text-foreground text-right align-top">{item.price}</td>
                     </tr>
                   ))}
                 </tbody>
