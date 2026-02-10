@@ -1,4 +1,4 @@
-import { FileText, Mail, Phone, Globe, AlertCircle, TrendingUp, Shield } from "lucide-react";
+import { FileText, Mail, Phone, Globe, TrendingUp, Shield } from "lucide-react";
 import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
@@ -16,50 +16,50 @@ const QuotationDocument = () => {
 
   const services = [
     {
-      service: "Website Management",
-      description: "Monthly website monitoring, security updates, backups, performance optimization, content updates, and minor design tweaks to keep your site running smoothly.",
-      price: "₹4,000"
+      service: "Home Page",
+      description: "Hero section with stunning aquarium visuals, business introduction, key services overview, and call-to-action sections.",
     },
     {
-      service: "Search Engine Optimization (SEO)",
-      description: "Local SEO optimization for Kolkata/East India, on-page optimization, Google Business Profile management, keyword research & targeting, technical SEO audits, and monthly ranking reports.",
-      price: "₹8,500"
+      service: "About Us",
+      description: "Brand story, mission & vision, team introduction, and business journey showcasing expertise in aquarium services.",
     },
     {
-      service: "Meta Ads Campaign Management",
-      description: "Meta Ads campaign setup & management (₹250/day awareness campaigns on Facebook & Instagram), audience targeting, creative optimization, A/B testing, and performance reporting.",
-      price: "₹5,500"
+      service: "Services / Products",
+      description: "Detailed showcase of aquarium services & products offered — fish varieties, tanks, accessories, maintenance services, and custom aquarium setups.",
     },
     {
-      service: "Paid Advertising Management & WhatsApp Marketing",
-      description: "Google Ads campaign management (₹1,000/day targeting Kolkata & nearby areas), campaign optimization & reporting, and WhatsApp Business marketing with broadcast campaigns, customer engagement & automated responses.",
-      price: "₹14,500"
+      service: "Gallery",
+      description: "Visual portfolio of aquarium setups, fish collections, and completed projects with high-quality image grid/lightbox layout.",
+    },
+    {
+      service: "Contact Us",
+      description: "Contact form, Google Maps integration, business address, phone number, email, working hours, and social media links.",
     },
   ];
 
   const extraFeatures = [
-    { feature: "Social Media Optimization (SMO)", description: "Social profile management, content creation, audience engagement across Instagram, Facebook, LinkedIn & more" },
-    { feature: "Additional Social Platforms", description: "Extend presence to LinkedIn, Twitter/X, Pinterest, or YouTube" },
-    { feature: "E-commerce Integration", description: "Product catalog setup, payment gateway, and order management" },
-    { feature: "Content Writing Services", description: "Blog posts, articles, and website copy creation" },
-    { feature: "Video Content Creation", description: "Reels, shorts, and promotional video production" },
-    { feature: "Email Marketing", description: "Newsletter design, automation, and campaign management" },
-    { feature: "Influencer Collaboration", description: "Identifying and coordinating with local influencers for brand promotion" },
-    { feature: "Advanced Analytics Dashboard", description: "Custom reporting dashboard with real-time metrics and insights" },
+    { feature: "Additional Pages", description: "Extra pages beyond the 5 included (e.g., Blog, FAQ, Testimonials, Pricing)" },
+    { feature: "E-commerce Integration", description: "Online store with product catalog, cart, payment gateway, and order management" },
+    { feature: "SEO Optimization", description: "On-page SEO setup, meta tags, schema markup, and Google Search Console integration" },
+    { feature: "Social Media Integration", description: "Social media feeds, sharing buttons, and profile linking across platforms" },
+    { feature: "WhatsApp Chat Widget", description: "Floating WhatsApp button for instant customer communication" },
+    { feature: "Content Writing", description: "Professional website copy and content creation for all pages" },
+    { feature: "Logo & Branding", description: "Logo design, brand color palette, typography, and brand identity kit" },
+    { feature: "Website Maintenance", description: "Monthly updates, security patches, backups, and performance optimization" },
   ];
 
   const termsAndConditions = [
     "This quotation is valid for 4 (four) days from the date of issue.",
-    "This is a recurring monthly service. Minimum contract period: 6 months for service consistency and measurable results.",
-    "Payment is due within 7 days of invoice date at the start of each month.",
-    "Scope is limited to services mentioned above. Any additional requirements will be quoted separately.",
-    "Client must provide timely access to website hosting, CMS login, social media accounts, and Google Business Profile.",
-    "Content approval: Client will receive content drafts for approval before publishing. Delayed approvals may affect posting schedule.",
-    "SEO results typically take 3-6 months to show significant improvement. Rankings depend on competition and algorithm updates.",
-    "Social media growth depends on engagement, content quality, and audience behavior. We do not guarantee specific follower counts.",
-    "Any third-party tool subscriptions (premium plugins, stock images, ad spend) are NOT included and will be billed separately.",
-    "Service can be upgraded or scaled mid-contract with 15 days notice and revised pricing.",
-    "Cancellation requires 30 days written notice. Early termination within minimum period incurs 2 months' fee.",
+    "This is a one-time website development project. Timeline: 10-15 working days from content & assets receipt.",
+    "Payment terms: 50% advance to commence work, 50% before final delivery & domain pointing.",
+    "Scope is limited to 5 pages as mentioned above. Any additional pages or features will be quoted separately.",
+    "Client must provide all content (text, images, logos, videos) in a timely manner. Delays in content submission will extend the timeline.",
+    "Up to 2 rounds of revisions are included. Additional revision rounds will be charged separately.",
+    "Domain name registration and hosting charges are NOT included and will be billed separately or managed by the client.",
+    "Third-party integrations (payment gateways, CRM, etc.) may incur additional charges depending on complexity.",
+    "Website will be responsive (mobile, tablet & desktop compatible) and optimized for modern browsers.",
+    "Post-delivery support: 15 days of free bug-fix support after website handover.",
+    "Ownership of the website will be transferred to the client upon full payment.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
   ];
 
@@ -81,7 +81,7 @@ const QuotationDocument = () => {
             <div>
               <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
               <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
-              <p className="text-muted-foreground mt-1 text-sm">Digital Marketing Services - Basic Plan</p>
+              <p className="text-muted-foreground mt-1 text-sm">Website Development - 5 Page Business Website</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
@@ -100,7 +100,7 @@ const QuotationDocument = () => {
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   <div>
                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Bill To</h3>
-                    <p className="text-lg font-semibold text-foreground">The Finishing Touch Garden Studio</p>
+                    <p className="text-lg font-semibold text-foreground">La Aquaria</p>
                     <p className="text-muted-foreground text-sm mt-1">Kolkata, West Bengal</p>
                   </div>
                   <div>
@@ -184,49 +184,24 @@ const QuotationDocument = () => {
 
           {/* Total Cost */}
           <div className="my-8">
-          <div className="quote-total-box p-6 rounded-lg">
+            <div className="quote-total-box p-6 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Monthly Service Fee</p>
-                  <p className="text-xs text-white/60 mt-1">Basic Plan - Digital Marketing Bundle</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Website Development Fee</p>
+                  <p className="text-xs text-white/60 mt-1">5 Page Business Website - One Time</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹32,500/-</p>
-                  <p className="text-white/70 text-sm mt-1">Per Month • Excluding GST (18%)</p>
-                  <p className="text-xl font-semibold mt-2 text-white/90">₹38,350/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
+                  <p className="text-3xl font-bold">₹15,000/-</p>
+                  <p className="text-white/70 text-sm mt-1">One Time • Excluding GST (18%)</p>
+                  <p className="text-xl font-semibold mt-2 text-white/90">₹17,700/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
                 </div>
               </div>
             </div>
 
-            {/* Ad Spend Breakdown */}
+            {/* Domain & Hosting Note */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mt-4">
-              <p className="text-sm font-semibold text-blue-800 mb-3">Client Ad Spend (Billed Separately)</p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white rounded-md p-3 border border-blue-100">
-                  <p className="text-xs text-blue-600 font-medium uppercase tracking-wider">Google Ads</p>
-                  <p className="text-lg font-bold text-blue-900 mt-1">₹1,000/day</p>
-                  <p className="text-xs text-blue-500 mt-0.5">~₹30,000/month • Kolkata & nearby</p>
-                </div>
-                <div className="bg-white rounded-md p-3 border border-blue-100">
-                  <p className="text-xs text-blue-600 font-medium uppercase tracking-wider">Meta Ads</p>
-                  <p className="text-lg font-bold text-blue-900 mt-1">₹250/day</p>
-                  <p className="text-xs text-blue-500 mt-0.5">~₹7,500/month • Awareness campaigns</p>
-                </div>
-              </div>
-              <p className="text-xs text-blue-600 mt-3 italic">* Ad spend is paid directly to Google/Meta. Amounts may vary based on campaign performance and optimization.</p>
-            </div>
-          </div>
-
-          {/* Important Notice */}
-          <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-            <div>
-              <p className="text-sm font-semibold text-amber-800">Important: Ad Spend & Additional Costs</p>
-              <p className="text-sm text-amber-700 mt-1">
-                Google Ads (~₹30,000/month) and Meta Ads (~₹7,500/month) spend is paid directly to the respective platforms 
-                and is NOT included in the service fee. Third-party tool subscriptions, premium stock images, 
-                WhatsApp Business API charges (if any), and any other external services will also be billed separately.
-              </p>
+              <p className="text-sm font-semibold text-blue-800 mb-2">Domain & Hosting (Billed Separately)</p>
+              <p className="text-xs text-blue-600">Domain registration and web hosting charges are not included in this quotation. These can be arranged by the client or managed by Zan Services at actual cost.</p>
             </div>
           </div>
 
@@ -247,10 +222,11 @@ const QuotationDocument = () => {
           <div className="mt-6 p-5 bg-secondary/50 rounded-lg">
             <h3 className="text-sm font-semibold text-foreground mb-2">Privacy & Confidentiality</h3>
             <p className="text-xs text-muted-foreground leading-relaxed">
-              Zan Services respects client confidentiality. All data, API keys, credentials, business information, 
+              Zan Services respects client confidentiality. All data, credentials, business information, 
               and technical details shared during the project will be kept strictly confidential and used only for 
-              service execution. No client data will be shared with third parties without prior consent, except 
-              where required by law or platform policies.
+              project execution. No client data will be shared with third parties without prior consent, except 
+              where required by law or platform policies. Website source files and access credentials will be 
+              handed over to the client upon full payment.
             </p>
           </div>
         </div>
