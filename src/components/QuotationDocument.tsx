@@ -20,8 +20,8 @@ const QuotationDocument = () => {
       description: "Company-side control panel — Create/activate/deactivate schools, manage subscription plans, set teacher license limits, trial period (14 days), payment status tracking, school/teacher/student analytics dashboard, send announcements, and reset school admin passwords.",
     },
     {
-      service: "School Admin / Principal Panel (Web + Mobile)",
-      description: "Complete school management — Dashboard with student/teacher/fee stats, teacher management (add, assign class, disable, reset password, license slots), class & section management, student management (add, edit, shift, mark inactive), fees management (set monthly fee, due dates, late fine, mark paid, pending list, receipt generation), WhatsApp reminders (before/on/after due date, single/class/all), broadcast notices/homework/holidays, and class-wise & monthly collection reports.",
+      service: "School Admin Panel (Web + Mobile)",
+      description: "School management panel — Dashboard with student/teacher/fee stats, teacher management (add, assign class, disable, reset password, license slots), class & section management, student management (add, edit, shift, mark inactive), fees management (set monthly fee, due dates, late fine, mark paid, pending list, receipt generation), WhatsApp reminders (before/on/after due date, single/class/all), broadcast notices/homework/holidays, and class-wise & monthly collection reports.",
     },
     {
       service: "Teacher Panel (Mobile App)",
@@ -46,10 +46,8 @@ const QuotationDocument = () => {
     { feature: "Online Fee Payment", description: "Payment gateway integration (Razorpay/Paytm) for online fee collection with automated receipts" },
     { feature: "Attendance Module", description: "Daily student & teacher attendance tracking with monthly reports and parent notifications" },
     { feature: "Exam & Result Management", description: "Exam scheduling, marks entry, report card generation, and result sharing with parents" },
-    { feature: "Transport Management", description: "Bus route management, driver details, student-bus mapping, and GPS tracking integration" },
     { feature: "Multi-Language Support", description: "Hindi, Bengali, and other regional language support for the entire application interface" },
-    { feature: "Advanced Analytics", description: "Detailed dashboards with charts, fee collection trends, student enrollment analytics, and exportable reports" },
-    { feature: "Custom Branding", description: "White-label solution with school's own logo, colors, and custom domain for the web panel" },
+    { feature: "Redis Caching Layer", description: "High-performance caching for faster data retrieval, reduced database load, and improved response times across all panels" },
   ];
 
   const termsAndConditions = [
@@ -62,7 +60,7 @@ const QuotationDocument = () => {
     "Cloud hosting, domain, and SSL charges are NOT included and will be billed separately or managed by the client.",
     "WhatsApp Business API costs (Meta conversation charges + BSP fees) are recurring and will be borne by the client separately (estimated ₹1,500–₹2,500/month for 10K messages).",
     "Play Store (₹2,100 one-time) and App Store (₹8,700/year) developer account fees are included in this quotation.",
-    "Application will be responsive, optimized for low-bandwidth usage, and secured with encrypted data storage.",
+    "Application will be built using Next.js (web), React Native (mobile), MongoDB with multi-tenant database architecture, AWS cloud infrastructure, and optional Redis caching layer.",
     "Post-delivery support: 30 days of free bug-fix support after final deployment. AMC (Annual Maintenance Contract) available separately.",
     "Source code and all credentials will be handed over to the client upon full payment.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
@@ -87,6 +85,7 @@ const QuotationDocument = () => {
               <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
               <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
               <p className="text-muted-foreground mt-1 text-sm">School Management Web & Mobile Application</p>
+              <p className="text-xs text-muted-foreground mt-2 font-medium">Tech Stack: Next.js • React Native • MongoDB • Multi-Tenant DB • AWS • Redis</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
@@ -105,7 +104,7 @@ const QuotationDocument = () => {
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   <div>
                      <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Prepared For</h3>
-                     <p className="text-lg font-semibold text-foreground">Client</p>
+                     <p className="text-lg font-semibold text-foreground">Nikhil Rastogi</p>
                      <p className="text-muted-foreground text-sm mt-1">School Management System</p>
                   </div>
                   <div>
