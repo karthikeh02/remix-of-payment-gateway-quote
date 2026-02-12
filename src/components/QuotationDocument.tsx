@@ -1,10 +1,10 @@
-import { FileText, Mail, Phone, Globe, TrendingUp, Shield } from "lucide-react";
+import { FileText, Mail, Phone, Globe, TrendingUp, Shield, MessageSquare, AlertCircle } from "lucide-react";
 import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
   const currentDate = new Date();
   const validUntilDate = new Date(currentDate);
-  validUntilDate.setDate(validUntilDate.getDate() + 4);
+  validUntilDate.setDate(validUntilDate.getDate() + 7);
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-IN', {
@@ -16,50 +16,55 @@ const QuotationDocument = () => {
 
   const services = [
     {
-      service: "Home Page",
-      description: "Hero section with stunning aquarium visuals, business introduction, key services overview, and call-to-action sections.",
+      service: "Super Admin Panel (Web)",
+      description: "Company-side control panel — Create/activate/deactivate schools, manage subscription plans, set teacher license limits, trial period (14 days), payment status tracking, school/teacher/student analytics dashboard, send announcements, and reset school admin passwords.",
     },
     {
-      service: "About Us",
-      description: "Brand story, mission & vision, team introduction, and business journey showcasing expertise in aquarium services.",
+      service: "School Admin / Principal Panel (Web + Mobile)",
+      description: "Complete school management — Dashboard with student/teacher/fee stats, teacher management (add, assign class, disable, reset password, license slots), class & section management, student management (add, edit, shift, mark inactive), fees management (set monthly fee, due dates, late fine, mark paid, pending list, receipt generation), WhatsApp reminders (before/on/after due date, single/class/all), broadcast notices/homework/holidays, and class-wise & monthly collection reports.",
     },
     {
-      service: "Services / Products",
-      description: "Detailed showcase of aquarium services & products offered — fish varieties, tanks, accessories, maintenance services, and custom aquarium setups.",
+      service: "Teacher Panel (Mobile App)",
+      description: "Teacher-specific access — View assigned class students only, add homework, send class messages to parents via WhatsApp, optional fee collection marking (if school allows). Teachers cannot delete students or access other classes.",
     },
     {
-      service: "Gallery",
-      description: "Visual portfolio of aquarium setups, fish collections, and completed projects with high-quality image grid/lightbox layout.",
+      service: "WhatsApp Integration",
+      description: "Automated WhatsApp messaging to parents — Homework notifications, school notices, fee reminders (before/on/after due date). Editable message templates for all communication types. No separate parent app needed.",
     },
     {
-      service: "Contact Us",
-      description: "Contact form, Google Maps integration, business address, phone number, email, working hours, and social media links.",
+      service: "Subscription & Licensing System",
+      description: "14-day free trial with auto-expiry and login blocking. License-based teacher access (e.g., 8 paid licenses = 8 active teachers). Subscription management with renewal tracking.",
+    },
+    {
+      service: "Play Store & App Store Deployment",
+      description: "Complete mobile app deployment on Google Play Store and Apple App Store including developer account setup, app listing, screenshots, descriptions, and submission for review & approval.",
     },
   ];
 
   const extraFeatures = [
-    { feature: "Additional Pages", description: "Extra pages beyond the 5 included (e.g., Blog, FAQ, Testimonials, Pricing)" },
-    { feature: "E-commerce Integration", description: "Online store with product catalog, cart, payment gateway, and order management" },
-    { feature: "SEO Optimization", description: "On-page SEO setup, meta tags, schema markup, and Google Search Console integration" },
-    { feature: "Social Media Integration", description: "Social media feeds, sharing buttons, and profile linking across platforms" },
-    { feature: "WhatsApp Chat Widget", description: "Floating WhatsApp button for instant customer communication" },
-    { feature: "Content Writing", description: "Professional website copy and content creation for all pages" },
-    { feature: "Logo & Branding", description: "Logo design, brand color palette, typography, and brand identity kit" },
-    { feature: "Website Maintenance", description: "Monthly updates, security patches, backups, and performance optimization" },
+    { feature: "SMS Integration", description: "Fallback SMS notifications for parents without WhatsApp, with bulk SMS gateway integration" },
+    { feature: "Online Fee Payment", description: "Payment gateway integration (Razorpay/Paytm) for online fee collection with automated receipts" },
+    { feature: "Attendance Module", description: "Daily student & teacher attendance tracking with monthly reports and parent notifications" },
+    { feature: "Exam & Result Management", description: "Exam scheduling, marks entry, report card generation, and result sharing with parents" },
+    { feature: "Transport Management", description: "Bus route management, driver details, student-bus mapping, and GPS tracking integration" },
+    { feature: "Multi-Language Support", description: "Hindi, Bengali, and other regional language support for the entire application interface" },
+    { feature: "Advanced Analytics", description: "Detailed dashboards with charts, fee collection trends, student enrollment analytics, and exportable reports" },
+    { feature: "Custom Branding", description: "White-label solution with school's own logo, colors, and custom domain for the web panel" },
   ];
 
   const termsAndConditions = [
-    "This quotation is valid for 4 (four) days from the date of issue.",
-    "This is a one-time website development project. Timeline: 10-15 working days from content & assets receipt.",
-    "Payment terms: 50% advance to commence work, 50% before final delivery & domain pointing.",
-    "Scope is limited to 5 pages as mentioned above. Any additional pages or features will be quoted separately.",
-    "Client must provide all content (text, images, logos, videos) in a timely manner. Delays in content submission will extend the timeline.",
-    "Up to 2 rounds of revisions are included. Additional revision rounds will be charged separately.",
-    "Domain name registration and hosting charges are NOT included and will be billed separately or managed by the client.",
-    "Third-party integrations (payment gateways, CRM, etc.) may incur additional charges depending on complexity.",
-    "Website will be responsive (mobile, tablet & desktop compatible) and optimized for modern browsers.",
-    "Post-delivery support: 15 days of free bug-fix support after website handover.",
-    "Ownership of the website will be transferred to the client upon full payment.",
+    "This quotation is valid for 7 (seven) days from the date of issue.",
+    "Estimated project timeline: 60-90 working days from project kickoff and requirements finalization.",
+    "Payment terms: 40% advance to commence work, 30% on mid-project milestone delivery, 30% before final deployment.",
+    "Scope is limited to the modules mentioned above (Super Admin, School Admin, Teacher panels + WhatsApp integration + App Store deployment).",
+    "Client must provide all branding assets (logo, colors, content) in a timely manner. Delays will extend the timeline accordingly.",
+    "Up to 3 rounds of UI/UX revisions are included per module. Additional revision rounds will be charged separately.",
+    "Cloud hosting, domain, and SSL charges are NOT included and will be billed separately or managed by the client.",
+    "WhatsApp Business API costs (Meta conversation charges + BSP fees) are recurring and will be borne by the client separately (estimated ₹1,500–₹2,500/month for 10K messages).",
+    "Play Store (₹2,100 one-time) and App Store (₹8,700/year) developer account fees are included in this quotation.",
+    "Application will be responsive, optimized for low-bandwidth usage, and secured with encrypted data storage.",
+    "Post-delivery support: 30 days of free bug-fix support after final deployment. AMC (Annual Maintenance Contract) available separately.",
+    "Source code and all credentials will be handed over to the client upon full payment.",
     "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
   ];
 
@@ -81,7 +86,7 @@ const QuotationDocument = () => {
             <div>
               <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
               <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
-              <p className="text-muted-foreground mt-1 text-sm">Website Development - 5 Page Business Website</p>
+              <p className="text-muted-foreground mt-1 text-sm">School Management Web & Mobile Application</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
@@ -99,9 +104,9 @@ const QuotationDocument = () => {
               <div className="quote-highlight-box p-5 rounded-lg">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   <div>
-                    <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Bill To</h3>
-                    <p className="text-lg font-semibold text-foreground">La Aquaria</p>
-                    <p className="text-muted-foreground text-sm mt-1">Kolkata, West Bengal</p>
+                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Prepared For</h3>
+                     <p className="text-lg font-semibold text-foreground">Client</p>
+                     <p className="text-muted-foreground text-sm mt-1">School Management System</p>
                   </div>
                   <div>
                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Service Provider</h3>
@@ -130,15 +135,15 @@ const QuotationDocument = () => {
           <div className="quote-section">
             <div className="flex items-center gap-3 mb-4">
               <TrendingUp className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-semibold text-foreground">Services Included</h2>
+              <h2 className="text-lg font-semibold text-foreground">Modules & Services Included</h2>
             </div>
             <div className="overflow-hidden rounded-lg border border-quote-border">
               <table className="w-full">
                 <thead>
                   <tr className="quote-table-header">
-                     <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Service</th>
-                     <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
-                   </tr>
+                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Module</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
+                  </tr>
                 </thead>
                 <tbody>
                   {services.map((item, index) => (
@@ -187,21 +192,41 @@ const QuotationDocument = () => {
             <div className="quote-total-box p-6 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Website Development Fee</p>
-                  <p className="text-xs text-white/60 mt-1">5 Page Business Website - One Time</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Project Development Fee</p>
+                  <p className="text-xs text-white/60 mt-1">School Management System — Web + Mobile + Deployment</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹15,000/-</p>
+                  <p className="text-3xl font-bold">₹3,50,000/-</p>
                   <p className="text-white/70 text-sm mt-1">One Time • Excluding GST (18%)</p>
-                  <p className="text-xl font-semibold mt-2 text-white/90">₹17,700/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
+                  <p className="text-xl font-semibold mt-2 text-white/90">₹4,13,000/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
                 </div>
               </div>
             </div>
 
-            {/* Domain & Hosting Note */}
+            {/* WhatsApp Recurring Cost Note */}
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-5 mt-4">
+              <div className="flex items-start gap-3">
+                <MessageSquare className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-amber-800 mb-2">WhatsApp API — Recurring Monthly Cost (Client-Borne)</p>
+                  <p className="text-xs text-amber-700 leading-relaxed">
+                    WhatsApp Business API charges are separate and recurring. For ~10,000 messages/month: 
+                    Meta conversation charges ≈ ₹1,150 + BSP (Business Solution Provider) fees ≈ ₹500–₹1,000. 
+                    <strong> Estimated total: ₹1,500–₹2,500/month.</strong> Messages initiated by parents (replies) are often free.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Hosting Note */}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mt-4">
-              <p className="text-sm font-semibold text-blue-800 mb-2">Domain & Hosting (Billed Separately)</p>
-              <p className="text-xs text-blue-600">Domain registration and web hosting charges are not included in this quotation. These can be arranged by the client or managed by Zan Services at actual cost.</p>
+              <div className="flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-blue-800 mb-2">Cloud Hosting & Domain (Billed Separately)</p>
+                  <p className="text-xs text-blue-600">Cloud server hosting, domain registration, and SSL certificate charges are not included in this quotation. These will be billed separately based on usage and provider selected.</p>
+                </div>
+              </div>
             </div>
           </div>
 
