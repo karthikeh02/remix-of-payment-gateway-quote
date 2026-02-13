@@ -15,16 +15,12 @@ const QuotationDocument = () => {
   };
 
   const websitePages = [
-    { page: "Home Page", description: "Hero section with business overview, key services highlight, trust signals, and strong call-to-action for enquiries." },
-    { page: "About Us", description: "Company story, experience, mission, team overview, and machinery/equipment showcase." },
-    { page: "Services", description: "Detailed listing of all services — open well digging, ground leveling, earthmoving, JCB/machinery services with images." },
-    { page: "Gallery / Projects", description: "Photo & video gallery of completed projects, machinery at work, before/after shots of sites across Tamil Nadu." },
-    { page: "Contact Us", description: "Contact form, Google Maps integration (Salem location), phone number, WhatsApp chat button, and enquiry form." },
+    { page: "Home Page", description: "Hero section with business overview, all services detailed (open well digging, ground leveling, earthmoving, JCB/machinery services), project gallery, trust signals, contact form with Google Maps (Salem location), WhatsApp chat button, and strong call-to-action for enquiries." },
+    { page: "About Us", description: "Company story, years of experience, mission & vision, team overview, machinery/equipment showcase, and completed project highlights across Tamil Nadu." },
   ];
 
   const digitalMarketingServices = [
     { service: "Google Ads Campaign Setup", description: "Complete Google Ads account setup, campaign structure, ad group creation, keyword research targeting open well, borewell, earthmoving, ground leveling services across Pan Tamil Nadu." },
-    { service: "Ad Copywriting & Creatives", description: "Compelling Tamil & English ad copies targeting contractors, builders, farmers, and landowners. Multiple ad variations for A/B testing." },
     { service: "Keyword Research & Targeting", description: "In-depth keyword research for high-intent searches like 'open well contractors near me', 'ground leveling services Tamil Nadu', 'JCB rental Salem' etc." },
     { service: "Geo-Targeting (Pan Tamil Nadu)", description: "Location-based targeting across all districts of Tamil Nadu — Salem, Chennai, Coimbatore, Madurai, Trichy, and surrounding areas." },
     { service: "Campaign Monitoring & Optimization", description: "Daily bid adjustments, negative keyword updates, quality score improvement, CTR optimization, and conversion tracking." },
@@ -101,7 +97,7 @@ const QuotationDocument = () => {
           <div className="quote-section">
             <div className="flex items-center gap-3 mb-4">
               <Globe className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-semibold text-foreground">Website Development — 5 Pages</h2>
+              <h2 className="text-lg font-semibold text-foreground">Website Development — 2 Pages</h2>
             </div>
             <div className="overflow-hidden rounded-lg border border-quote-border">
               <table className="w-full">
@@ -155,7 +151,7 @@ const QuotationDocument = () => {
             <div className="quote-total-box p-5 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Website Development (5 Pages)</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Website Development (2 Pages)</p>
                   <p className="text-xs text-white/60 mt-1">Responsive • SEO-Friendly • Mobile Optimized</p>
                 </div>
                 <div className="text-right">
