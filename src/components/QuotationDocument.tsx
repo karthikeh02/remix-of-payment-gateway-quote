@@ -1,10 +1,10 @@
-import { FileText, Mail, Phone, Globe, TrendingUp, Shield, MessageSquare, AlertCircle } from "lucide-react";
+import { FileText, Mail, Phone, Globe, TrendingUp, Shield, BarChart3 } from "lucide-react";
 import zanLogo from "@/assets/zan-logo.png";
 
 const QuotationDocument = () => {
   const currentDate = new Date();
   const validUntilDate = new Date(currentDate);
-  validUntilDate.setDate(validUntilDate.getDate() + 7);
+  validUntilDate.setDate(validUntilDate.getDate() + 2);
 
   const formatDate = (date: Date) => {
     return date.toLocaleDateString('en-IN', {
@@ -14,57 +14,36 @@ const QuotationDocument = () => {
     });
   };
 
-  const services = [
-    {
-      service: "Super Admin Panel (Web)",
-      description: "Company-side control panel — Create/activate/deactivate schools, manage subscription plans, set teacher license limits, trial period (14 days), payment status tracking, school/teacher/student analytics dashboard, send announcements, and reset school admin passwords. Built with Next.js (Full-Stack).",
-    },
-    {
-      service: "School Admin / Principal Panel (Web Only)",
-      description: "Complete school management — Dashboard with student/teacher/fee stats, teacher management (add, assign class, disable, reset password, license slots), class & section management, student management (add, edit, shift, mark inactive), fees management (set monthly fee, due dates, late fine, mark paid, pending list, receipt generation), WhatsApp reminders (before/on/after due date, single/class/all), broadcast notices/homework/holidays, and class-wise & monthly collection reports. Built with Next.js (Full-Stack).",
-    },
-    {
-      service: "Teacher Panel (Mobile App)",
-      description: "Teacher-specific access — View assigned class students only, add homework, send class messages to parents via WhatsApp, optional fee collection marking (if school allows). Teachers cannot delete students or access other classes. Built with React Native (iOS & Android).",
-    },
-    {
-      service: "WhatsApp Integration",
-      description: "Automated WhatsApp messaging to parents — Homework notifications, school notices, fee reminders (before/on/after due date). Editable message templates for all communication types. No separate parent app needed.",
-    },
-    {
-      service: "Subscription & Licensing System",
-      description: "14-day free trial with auto-expiry and login blocking. License-based teacher access (e.g., 8 paid licenses = 8 active teachers). Subscription management with renewal tracking.",
-    },
-    {
-      service: "Play Store & App Store Deployment",
-      description: "Complete mobile app deployment on Google Play Store and Apple App Store including developer account setup, app listing, screenshots, descriptions, and submission for review & approval.",
-    },
+  const websitePages = [
+    { page: "Home Page", description: "Hero section with business overview, key services highlight, trust signals, and strong call-to-action for enquiries." },
+    { page: "About Us", description: "Company story, experience, mission, team overview, and machinery/equipment showcase." },
+    { page: "Services", description: "Detailed listing of all services — open well digging, ground leveling, earthmoving, JCB/machinery services with images." },
+    { page: "Gallery / Projects", description: "Photo & video gallery of completed projects, machinery at work, before/after shots of sites across Tamil Nadu." },
+    { page: "Contact Us", description: "Contact form, Google Maps integration (Salem location), phone number, WhatsApp chat button, and enquiry form." },
   ];
 
-  const extraFeatures = [
-    { feature: "SMS Integration", description: "Fallback SMS notifications for parents without WhatsApp, with bulk SMS gateway integration" },
-    { feature: "Online Fee Payment", description: "Payment gateway integration (Razorpay/Paytm) for online fee collection with automated receipts" },
-    { feature: "Attendance Module", description: "Daily student & teacher attendance tracking with monthly reports and parent notifications" },
-    { feature: "Exam & Result Management", description: "Exam scheduling, marks entry, report card generation, and result sharing with parents" },
-    { feature: "Multi-Language Support", description: "Hindi, Bengali, and other regional language support for the entire application interface" },
-    { feature: "Redis Caching Layer", description: "High-performance Redis caching for frequently accessed data, reducing database load and improving response times significantly" },
+  const digitalMarketingServices = [
+    { service: "Google Ads Campaign Setup", description: "Complete Google Ads account setup, campaign structure, ad group creation, keyword research targeting open well, borewell, earthmoving, ground leveling services across Pan Tamil Nadu." },
+    { service: "Ad Copywriting & Creatives", description: "Compelling Tamil & English ad copies targeting contractors, builders, farmers, and landowners. Multiple ad variations for A/B testing." },
+    { service: "Keyword Research & Targeting", description: "In-depth keyword research for high-intent searches like 'open well contractors near me', 'ground leveling services Tamil Nadu', 'JCB rental Salem' etc." },
+    { service: "Geo-Targeting (Pan Tamil Nadu)", description: "Location-based targeting across all districts of Tamil Nadu — Salem, Chennai, Coimbatore, Madurai, Trichy, and surrounding areas." },
+    { service: "Campaign Monitoring & Optimization", description: "Daily bid adjustments, negative keyword updates, quality score improvement, CTR optimization, and conversion tracking." },
+    { service: "Monthly Performance Reports", description: "Detailed monthly reports with metrics — impressions, clicks, CTR, cost per lead, conversions, and ROI analysis." },
   ];
 
   const termsAndConditions = [
-    "This quotation is valid for 7 (seven) days from the date of issue.",
-    "Estimated project timeline: 60-90 working days from project kickoff and requirements finalization.",
-    "Payment terms: 40% advance to commence work, 30% on mid-project milestone delivery, 30% before final deployment.",
-    "Scope is limited to the modules mentioned above (Super Admin, School Admin, Teacher panels + WhatsApp integration + App Store deployment).",
-    "Client must provide all branding assets (logo, colors, content) in a timely manner. Delays will extend the timeline accordingly.",
-    "Up to 3 rounds of UI/UX revisions are included per module. Additional revision rounds will be charged separately.",
-    "Cloud hosting, domain, and SSL charges are NOT included and will be billed separately or managed by the client.",
-    "WhatsApp Business API costs (Meta conversation charges + BSP fees) are recurring and will be borne by the client separately (estimated ₹1,500–₹2,500/month for 10K messages).",
-    "Play Store (₹2,100 one-time) and App Store (₹8,700/year) developer account fees are included in this quotation.",
-    "Application will be responsive, optimized for low-bandwidth usage, and secured with encrypted data storage. Multi-tenant MongoDB architecture ensures complete data isolation between schools.",
-    "Tech stack: Next.js (Web Frontend + API), React Native (Teacher Mobile App), MongoDB (Multi-Tenant Database), AWS (Cloud Infrastructure). Redis caching available at extra cost.",
-    "Post-delivery support: 30 days of free bug-fix support after final deployment. AMC (Annual Maintenance Contract) available separately.",
-    "Source code and all credentials will be handed over to the client upon full payment.",
-    "GST @ 18% is applicable on the quoted amount and will be charged additionally.",
+    "This quotation is valid for 2 (two) days from the date of issue.",
+    "Payment terms: 100% advance payment before commencement of work.",
+    "Website delivery timeline: 7-10 working days from content & branding assets received.",
+    "Digital marketing services are billed monthly (₹10,000/month including GST) — payable in advance each month.",
+    "Google Ads spend of ₹500-600/day (₹15,000-₹18,000/month) is to be paid directly by the client to Google via the Ads account.",
+    "Client must provide all branding assets (logo, photos of machinery, project images) in a timely manner.",
+    "Up to 2 rounds of website design revisions are included. Additional revisions will be charged separately.",
+    "Domain registration and hosting charges are NOT included and will be billed separately or managed by the client.",
+    "Website will be fully responsive, mobile-optimized, fast-loading, and SEO-friendly.",
+    "Google Ads results depend on market competition, budget, and seasonal demand. No guaranteed leads are promised.",
+    "Either party may terminate the digital marketing retainer with 15 days written notice.",
+    "All prices mentioned are inclusive of GST (18%).",
   ];
 
   return (
@@ -72,11 +51,7 @@ const QuotationDocument = () => {
       <div className="quote-page rounded-lg overflow-hidden relative">
         {/* Background Logo Watermark */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
-          <img 
-            src={zanLogo} 
-            alt="" 
-            className="w-[600px] opacity-[0.04] select-none"
-          />
+          <img src={zanLogo} alt="" className="w-[600px] opacity-[0.04] select-none" />
         </div>
 
         {/* Header */}
@@ -85,7 +60,7 @@ const QuotationDocument = () => {
             <div>
               <img src={zanLogo} alt="Zan Services" className="h-14 mb-3" />
               <h1 className="text-3xl font-bold tracking-tight font-display text-quote-header-bg">Quotation</h1>
-              <p className="text-muted-foreground mt-1 text-sm">School Management System — Next.js • React Native • MongoDB • AWS</p>
+              <p className="text-muted-foreground mt-1 text-sm">Website Development & Google Ads Management — Open Well & Earthmoving Services</p>
               <div className="quote-accent-bar mt-4"></div>
             </div>
             <div className="text-right">
@@ -103,26 +78,18 @@ const QuotationDocument = () => {
               <div className="quote-highlight-box p-5 rounded-lg">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-4">
                   <div>
-                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Prepared For</h3>
-                     <p className="text-lg font-semibold text-foreground">Nikhil Rastogi</p>
-                     <p className="text-muted-foreground text-sm mt-1">School Management System</p>
+                    <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Prepared For</h3>
+                    <p className="text-lg font-semibold text-foreground">Siva Kumar</p>
+                    <p className="text-muted-foreground text-sm mt-1">Open Well & Earthmoving Contractor</p>
+                    <p className="text-muted-foreground text-sm">Salem, Tamil Nadu</p>
                   </div>
                   <div>
                     <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-2">Service Provider</h3>
                     <p className="text-lg font-semibold text-foreground">Zan Services</p>
                     <div className="text-sm text-muted-foreground mt-1 space-y-1">
-                      <p className="flex items-center gap-2">
-                        <Globe className="w-3.5 h-3.5" />
-                        zanservices.com
-                      </p>
-                      <p className="flex items-center gap-2">
-                        <Phone className="w-3.5 h-3.5" />
-                        +91 82408 25490
-                      </p>
-                      <p className="flex items-center gap-2">
-                        <Mail className="w-3.5 h-3.5" />
-                        operations@zanservices.com
-                      </p>
+                      <p className="flex items-center gap-2"><Globe className="w-3.5 h-3.5" />zanservices.com</p>
+                      <p className="flex items-center gap-2"><Phone className="w-3.5 h-3.5" />+91 82408 25490</p>
+                      <p className="flex items-center gap-2"><Mail className="w-3.5 h-3.5" />operations@zanservices.com</p>
                     </div>
                   </div>
                 </div>
@@ -130,22 +97,48 @@ const QuotationDocument = () => {
             </div>
           </div>
 
-          {/* Services Table */}
+          {/* Website Pages */}
           <div className="quote-section">
             <div className="flex items-center gap-3 mb-4">
-              <TrendingUp className="w-5 h-5 text-primary" />
-              <h2 className="text-lg font-semibold text-foreground">Modules & Services Included</h2>
+              <Globe className="w-5 h-5 text-primary" />
+              <h2 className="text-lg font-semibold text-foreground">Website Development — 5 Pages</h2>
             </div>
             <div className="overflow-hidden rounded-lg border border-quote-border">
               <table className="w-full">
                 <thead>
                   <tr className="quote-table-header">
-                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Module</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Page</th>
                     <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {services.map((item, index) => (
+                  {websitePages.map((item, index) => (
+                    <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
+                      <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.page}</td>
+                      <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Digital Marketing Services */}
+          <div className="quote-section">
+            <div className="flex items-center gap-3 mb-4">
+              <TrendingUp className="w-5 h-5 text-primary" />
+              <h2 className="text-lg font-semibold text-foreground">Google Ads Management — Pan Tamil Nadu</h2>
+            </div>
+            <div className="overflow-hidden rounded-lg border border-quote-border">
+              <table className="w-full">
+                <thead>
+                  <tr className="quote-table-header">
+                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Service</th>
+                    <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {digitalMarketingServices.map((item, index) => (
                     <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
                       <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.service}</td>
                       <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
@@ -156,74 +149,89 @@ const QuotationDocument = () => {
             </div>
           </div>
 
-          {/* Extra Features */}
-          <div className="quote-section">
-            <div className="flex items-center gap-3 mb-4">
-              <Shield className="w-5 h-5 text-quote-accent" />
-              <h2 className="text-lg font-semibold text-foreground">Additional Features</h2>
-              <span className="quote-badge">Extra Charges Apply</span>
-            </div>
-            <div className="overflow-hidden rounded-lg border border-quote-border">
-              <table className="w-full">
-                <thead>
-                  <tr className="quote-table-header">
-                    <th className="text-left py-3 px-4 text-sm font-semibold w-1/3">Feature</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold">Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {extraFeatures.map((item, index) => (
-                    <tr key={index} className={index % 2 === 1 ? "quote-table-row-stripe" : ""}>
-                      <td className="py-3 px-4 text-sm font-medium text-foreground align-top">{item.feature}</td>
-                      <td className="py-3 px-4 text-sm text-muted-foreground">{item.description}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-muted-foreground mt-3 italic">
-              * Pricing for additional features will be provided upon request based on specific requirements.
-            </p>
-          </div>
-
-          {/* Total Cost */}
-          <div className="my-8">
-            <div className="quote-total-box p-6 rounded-lg">
+          {/* Cost Breakdown */}
+          <div className="my-8 space-y-4">
+            {/* Website Cost */}
+            <div className="quote-total-box p-5 rounded-lg">
               <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-white/80 text-sm uppercase tracking-wider">Project Development Fee</p>
-                  <p className="text-xs text-white/60 mt-1">Next.js + React Native + MongoDB + AWS + Multi-Tenant Architecture</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Website Development (5 Pages)</p>
+                  <p className="text-xs text-white/60 mt-1">Responsive • SEO-Friendly • Mobile Optimized</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-3xl font-bold">₹3,50,000/-</p>
-                  <p className="text-white/70 text-sm mt-1">One Time • Excluding GST (18%)</p>
-                  <p className="text-xl font-semibold mt-2 text-white/90">₹4,13,000/- <span className="text-sm font-normal text-white/70">Including GST</span></p>
+                  <p className="text-2xl font-bold">₹10,000/-</p>
+                  <p className="text-white/70 text-sm mt-1">One Time • Including GST</p>
                 </div>
               </div>
             </div>
 
-            {/* WhatsApp Recurring Cost Note */}
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-5 mt-4">
-              <div className="flex items-start gap-3">
-                <MessageSquare className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+            {/* Digital Marketing Cost */}
+            <div className="quote-total-box p-5 rounded-lg">
+              <div className="flex justify-between items-center">
                 <div>
-                  <p className="text-sm font-semibold text-amber-800 mb-2">WhatsApp API — Recurring Monthly Cost (Client-Borne)</p>
+                  <p className="text-white/80 text-sm uppercase tracking-wider">Google Ads Management Fee</p>
+                  <p className="text-xs text-white/60 mt-1">Campaign Setup • Optimization • Monthly Reports</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-2xl font-bold">₹10,000/month</p>
+                  <p className="text-white/70 text-sm mt-1">Monthly Retainer • Including GST</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Ad Spend */}
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-5">
+              <div className="flex items-start gap-3">
+                <BarChart3 className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
+                <div>
+                  <p className="text-sm font-semibold text-amber-800 mb-2">Google Ads Spend — Paid Directly to Google by Client</p>
                   <p className="text-xs text-amber-700 leading-relaxed">
-                    WhatsApp Business API charges are separate and recurring. For ~10,000 messages/month: 
-                    Meta conversation charges ≈ ₹1,150 + BSP (Business Solution Provider) fees ≈ ₹500–₹1,000. 
-                    <strong> Estimated total: ₹1,500–₹2,500/month.</strong> Messages initiated by parents (replies) are often free.
+                    Daily ad budget: <strong>₹500–₹600/day</strong> → Monthly ad spend: <strong>₹15,000–₹18,000/month</strong>.
+                    This amount is paid directly to Google through the Google Ads account and is separate from our management fee.
+                    Ad spend gives you visibility across all of Tamil Nadu for searches related to open well digging, ground leveling, earthmoving, and heavy machinery services.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Hosting Note */}
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-5 mt-4">
+            {/* Total Summary */}
+            <div className="bg-secondary/60 border border-quote-border rounded-lg p-5">
+              <div className="flex items-center gap-3 mb-3">
+                <Shield className="w-5 h-5 text-primary" />
+                <h3 className="text-sm font-semibold text-foreground">Monthly Cost Summary</h3>
+              </div>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Website Development (One-Time)</span>
+                  <span className="font-semibold text-foreground">₹10,000/-</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Google Ads Management (Monthly)</span>
+                  <span className="font-semibold text-foreground">₹10,000/month</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-muted-foreground">Google Ad Spend (Monthly, paid to Google)</span>
+                  <span className="font-semibold text-foreground">₹15,000–₹18,000/month</span>
+                </div>
+                <div className="border-t border-quote-border pt-2 mt-2 flex justify-between">
+                  <span className="font-semibold text-foreground">First Month Total (Approx.)</span>
+                  <span className="font-bold text-foreground text-base">₹35,000–₹38,000/-</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="font-semibold text-muted-foreground">Recurring Monthly (from 2nd month)</span>
+                  <span className="font-bold text-muted-foreground">₹25,000–₹28,000/month</span>
+                </div>
+              </div>
+              <p className="text-xs text-muted-foreground mt-3 italic">* All prices are inclusive of GST (18%).</p>
+            </div>
+
+            {/* Domain & Hosting Note */}
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
+                <Globe className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm font-semibold text-blue-800 mb-2">Cloud Hosting & Domain (Billed Separately)</p>
-                  <p className="text-xs text-blue-600">Cloud server hosting, domain registration, and SSL certificate charges are not included in this quotation. These will be billed separately based on usage and provider selected.</p>
+                  <p className="text-sm font-semibold text-blue-800 mb-2">Domain & Hosting (Billed Separately)</p>
+                  <p className="text-xs text-blue-600">Domain registration and web hosting charges are not included in this quotation. These will be billed separately based on the hosting provider selected.</p>
                 </div>
               </div>
             </div>
@@ -258,7 +266,6 @@ const QuotationDocument = () => {
         {/* Footer */}
         <div className="quote-footer">
           <div className="grid md:grid-cols-2 gap-8">
-            {/* Bank Details */}
             <div>
               <h3 className="text-sm font-semibold text-foreground mb-3">Bank Details</h3>
               <div className="bg-card p-4 rounded-lg border border-quote-border">
@@ -284,8 +291,6 @@ const QuotationDocument = () => {
                 </table>
               </div>
             </div>
-
-            {/* Signature */}
             <div className="flex flex-col justify-end">
               <div className="text-right">
                 <div className="h-20 mb-2"></div>
@@ -297,25 +302,20 @@ const QuotationDocument = () => {
             </div>
           </div>
 
-          {/* Contact Bar */}
           <div className="mt-8 pt-6 border-t border-quote-border flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
             <a href="https://zanservices.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Globe className="w-4 h-4" />
-              zanservices.com
+              <Globe className="w-4 h-4" />zanservices.com
             </a>
             <a href="tel:+918240825490" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Phone className="w-4 h-4" />
-              +91 82408 25490
+              <Phone className="w-4 h-4" />+91 82408 25490
             </a>
             <a href="mailto:operations@zanservices.com" className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Mail className="w-4 h-4" />
-              operations@zanservices.com
+              <Mail className="w-4 h-4" />operations@zanservices.com
             </a>
           </div>
         </div>
       </div>
 
-      {/* Print Button - Hidden on print */}
       <div className="max-w-4xl mx-auto mt-6 flex justify-center no-print">
         <button
           onClick={() => window.print()}
