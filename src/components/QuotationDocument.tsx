@@ -15,37 +15,36 @@ const QuotationDocument = () => {
   };
 
   const seoServices = [
-    { feature: "Website SEO Audit & Analysis", description: "Complete technical audit of the website covering site speed, mobile-friendliness, crawl errors, indexing issues, and on-page optimization gaps." },
-    { feature: "Keyword Research & Strategy", description: "In-depth keyword research targeting NGO, healthcare, foundation, and social cause-related terms. Long-tail and local keyword mapping for Thane & Maharashtra." },
-    { feature: "On-Page SEO Optimization", description: "Title tags, meta descriptions, header tags, internal linking, image alt tags, schema markup, and content optimization for all key pages." },
-    { feature: "Off-Page SEO & Link Building", description: "Quality backlink building through directory submissions, guest posts, social bookmarking, and outreach to relevant NGO/healthcare platforms." },
-    { feature: "Local SEO (Google My Business)", description: "Google Business Profile optimization, local citations, NAP consistency, review management, and local map pack ranking strategy." },
-    { feature: "Monthly SEO Reporting", description: "Detailed monthly reports with keyword rankings, organic traffic growth, backlink profile, and actionable insights for continuous improvement." },
+    { feature: "Website SEO Audit", description: "Technical audit covering site speed, mobile-friendliness, crawl errors, and optimization gaps." },
+    { feature: "Keyword Research & Strategy", description: "Targeted keyword research for NGO, healthcare, and social cause terms with local mapping for Thane & Maharashtra." },
+    { feature: "On-Page SEO Optimization", description: "Meta tags, headers, internal linking, schema markup, and content optimization across all pages." },
+    { feature: "Off-Page SEO & Link Building", description: "Backlink building via directory submissions, guest posts, and outreach to relevant platforms." },
+    { feature: "Local SEO (Google My Business)", description: "Google Business Profile optimization, local citations, and map pack ranking strategy." },
+    { feature: "Monthly SEO Reporting", description: "Monthly reports with keyword rankings, traffic growth, and actionable insights." },
   ];
 
   const smoServices = [
-    { feature: "Social Media Strategy & Planning", description: "Customized content calendar and posting strategy for Facebook, Instagram, and LinkedIn tailored to Angel Care Foundation's mission and audience." },
-    { feature: "Content Creation & Posting", description: "Engaging posts including graphics, reels, stories, and carousels highlighting foundation activities, events, success stories, and awareness campaigns." },
-    { feature: "Community Management", description: "Active engagement with followers — responding to comments, messages, and building a supportive online community around the foundation's cause." },
-    { feature: "Hashtag & Trend Strategy", description: "Relevant hashtag research, trending topic leveraging, and strategic use of awareness days/events to maximize organic reach." },
-    { feature: "Monthly SMO Reporting", description: "Performance reports covering reach, engagement, follower growth, top-performing content, and recommendations for the next month." },
+    { feature: "Social Media Strategy & Planning", description: "Content calendar and posting strategy for Facebook, Instagram & LinkedIn tailored to the foundation's mission." },
+    { feature: "Content Creation & Posting", description: "Graphics, reels, stories, and carousels highlighting activities, events, and awareness campaigns." },
+    { feature: "Community Management", description: "Engagement with followers — comments, messages, and building an online community." },
+    { feature: "Hashtag & Trend Strategy", description: "Hashtag research and strategic use of trending topics to maximize organic reach." },
+    { feature: "Monthly SMO Reporting", description: "Reports covering reach, engagement, follower growth, and recommendations." },
   ];
 
   const googleAdsServices = [
-    { feature: "Google Ads Campaign Setup", description: "Search & Display campaign setup targeting relevant keywords related to healthcare, NGO donations, volunteering, and social causes across target regions." },
-    { feature: "Keyword Targeting & Bid Management", description: "Strategic keyword selection, negative keyword filtering, bid optimization, and budget allocation to maximize ROI and lead quality." },
-    { feature: "Ad Copy Creation", description: "Compelling ad copies with strong CTAs, sitelink extensions, callout extensions, and structured snippets to improve click-through rates." },
-    { feature: "Landing Page Recommendations", description: "Suggestions for high-converting landing pages aligned with ad campaigns to improve quality score and conversion rates." },
-    { feature: "Campaign Monitoring & Optimization", description: "Daily monitoring, A/B testing of ads, bid adjustments, and continuous optimization to reduce cost-per-click and improve conversions." },
-    { feature: "Monthly Google Ads Reporting", description: "Detailed reports with impressions, clicks, CTR, CPC, conversions, and spend analysis with actionable recommendations." },
+    { feature: "Campaign Setup & Management", description: "Search & Display campaign setup targeting healthcare, NGO, and social cause keywords." },
+    { feature: "Keyword & Bid Optimization", description: "Strategic keyword selection, negative filtering, and bid management to maximize ROI." },
+    { feature: "Ad Copy Creation", description: "Compelling ad copies with extensions and strong CTAs for better click-through rates." },
+    { feature: "Campaign Monitoring", description: "Daily monitoring, A/B testing, and continuous optimization to reduce CPC." },
+    { feature: "Monthly Reporting", description: "Reports with impressions, clicks, CTR, conversions, and spend analysis." },
   ];
 
   const metaAdsServices = [
-    { feature: "Meta Ads Campaign Setup", description: "Facebook & Instagram awareness campaigns designed to spread Angel Care Foundation's mission, events, and impact stories to a wider audience." },
-    { feature: "Audience Targeting & Segmentation", description: "Custom audience creation based on demographics, interests, behaviors, and lookalike audiences to reach potential supporters and donors." },
-    { feature: "Creative Ad Design", description: "Eye-catching image and video ads optimized for Facebook & Instagram feeds, stories, and reels to drive maximum awareness and engagement." },
-    { feature: "Campaign Optimization", description: "Continuous A/B testing of creatives, audiences, and placements. Budget optimization to maximize reach and awareness at the lowest cost." },
-    { feature: "Monthly Meta Ads Reporting", description: "Performance reports covering reach, impressions, engagement, cost-per-result, and audience insights with strategic recommendations." },
+    { feature: "Awareness Campaign Setup", description: "Facebook & Instagram campaigns to spread the foundation's mission and impact stories." },
+    { feature: "Audience Targeting", description: "Custom and lookalike audiences based on demographics, interests, and behaviors." },
+    { feature: "Creative Ad Design", description: "Image and video ads optimized for feeds, stories, and reels." },
+    { feature: "Campaign Optimization", description: "A/B testing of creatives and placements to maximize reach at lowest cost." },
+    { feature: "Monthly Reporting", description: "Reports covering reach, impressions, engagement, and audience insights." },
   ];
 
   const extraServices = [
@@ -288,20 +287,7 @@ const QuotationDocument = () => {
                 <div className="text-right">
                   <p className="text-2xl font-bold">₹25,000/month</p>
                   <p className="text-white/70 text-sm mt-1">Exclusive of GST (18%)</p>
-                </div>
-              </div>
-            </div>
-
-            {/* GST Note */}
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-5">
-              <div className="flex items-start gap-3">
-                <Shield className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-sm font-semibold text-amber-800 mb-2">GST & Final Amount</p>
-                  <p className="text-xs text-amber-700 leading-relaxed">
-                    GST @ 18% = <strong>₹4,500/month</strong> → Total with GST = <strong>₹29,500/month</strong>.
-                    All invoices will be raised with applicable GST. Input tax credit (ITC) can be claimed by the client where applicable.
-                  </p>
+                  <p className="text-lg font-semibold mt-2 text-white/90">₹29,500/month <span className="text-sm font-normal text-white/60">(Incl. GST)</span></p>
                 </div>
               </div>
             </div>
@@ -331,33 +317,6 @@ const QuotationDocument = () => {
                     Estimated Total Monthly Ad Spend: <strong>₹30,000/month</strong> (approx.) — Paid separately to platforms.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Monthly Cost Summary */}
-            <div className="bg-secondary/60 border border-quote-border rounded-lg p-5">
-              <div className="flex items-center gap-3 mb-3">
-                <BarChart3 className="w-5 h-5 text-primary" />
-                <h3 className="text-sm font-semibold text-foreground">Monthly Cost Summary</h3>
-              </div>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Zan Services Fee (SEO + SMO + Ads Management)</span>
-                  <span className="font-semibold text-foreground">₹25,000 + GST</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Google Ads Spend (₹800/day × 30 days)</span>
-                  <span className="font-semibold text-foreground">~₹24,000</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Meta Ads Spend (₹200/day × 30 days)</span>
-                  <span className="font-semibold text-foreground">~₹6,000</span>
-                </div>
-                <div className="border-t border-quote-border pt-2 mt-2 flex justify-between">
-                  <span className="font-semibold text-foreground">Estimated Total Monthly Outflow</span>
-                  <span className="font-bold text-foreground text-base">~₹59,500/month*</span>
-                </div>
-                <p className="text-xs text-muted-foreground mt-1">*Service fee inclusive of GST + ad spend. Ad spend may vary based on campaign needs.</p>
               </div>
             </div>
 
