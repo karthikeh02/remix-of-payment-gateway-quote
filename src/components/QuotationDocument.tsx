@@ -20,7 +20,7 @@ const QuotationDocument = () => {
     { feature: "On-Page SEO Optimization", description: "Meta tags, headers, internal linking, schema markup, and content optimization across all pages." },
     { feature: "Off-Page SEO & Link Building", description: "Backlink building via directory submissions, guest posts, and outreach to relevant platforms." },
     { feature: "Local SEO (Google My Business)", description: "Google Business Profile optimization, local citations, and map pack ranking strategy." },
-    { feature: "Monthly SEO Reporting", description: "Monthly reports with keyword rankings, traffic growth, and actionable insights." },
+    
   ];
 
   const smoServices = [
@@ -28,7 +28,7 @@ const QuotationDocument = () => {
     { feature: "Content Creation & Posting", description: "Graphics, reels, stories, and carousels highlighting activities, events, and awareness campaigns." },
     { feature: "Community Management", description: "Engagement with followers — comments, messages, and building an online community." },
     { feature: "Hashtag & Trend Strategy", description: "Hashtag research and strategic use of trending topics to maximize organic reach." },
-    { feature: "Monthly SMO Reporting", description: "Reports covering reach, engagement, follower growth, and recommendations." },
+    
   ];
 
   const googleAdsServices = [
@@ -36,7 +36,7 @@ const QuotationDocument = () => {
     { feature: "Keyword & Bid Optimization", description: "Strategic keyword selection, negative filtering, and bid management to maximize ROI." },
     { feature: "Ad Copy Creation", description: "Compelling ad copies with extensions and strong CTAs for better click-through rates." },
     { feature: "Campaign Monitoring", description: "Daily monitoring, A/B testing, and continuous optimization to reduce CPC." },
-    { feature: "Monthly Reporting", description: "Reports with impressions, clicks, CTR, conversions, and spend analysis." },
+    
   ];
 
   const metaAdsServices = [
@@ -44,14 +44,14 @@ const QuotationDocument = () => {
     { feature: "Audience Targeting", description: "Custom and lookalike audiences based on demographics, interests, and behaviors." },
     { feature: "Creative Ad Design", description: "Image and video ads optimized for feeds, stories, and reels." },
     { feature: "Campaign Optimization", description: "A/B testing of creatives and placements to maximize reach at lowest cost." },
-    { feature: "Monthly Reporting", description: "Reports covering reach, impressions, engagement, and audience insights." },
+    
   ];
 
   const extraServices = [
     { feature: "Google Analytics & Tag Setup", description: "Complete Google Analytics 4 (GA4) and Google Tag Manager setup for tracking website visitors, conversions, and campaign performance." },
     { feature: "Competitor Analysis", description: "Monthly competitor benchmarking to identify gaps, opportunities, and strategies to stay ahead in the digital space." },
     { feature: "Reputation Management", description: "Online reputation monitoring, review response strategy, and brand mention tracking across search and social platforms." },
-    { feature: "Email Campaign Support", description: "Support for monthly newsletters or email campaigns to donors, volunteers, and supporters (content & design assistance)." },
+    
   ];
 
   const termsAndConditions = [
