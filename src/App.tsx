@@ -20,6 +20,7 @@ import LinenStory from "./pages/LinenStory";
 import LegalMedia from "./pages/LegalMedia";
 import Subba from "./pages/Subba";
 import AssamEduverse from "./pages/AssamEduverse";
+import AssamEduverseRevised from "./pages/AssamEduverseRevised";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/legal-media" element={<LegalMedia />} />
           <Route path="/subba" element={<Subba />} />
           <Route path="/assam-eduverse" element={<AssamEduverse />} />
+          <Route path="/assam-eduverse-revised" element={<AssamEduverseRevised />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
